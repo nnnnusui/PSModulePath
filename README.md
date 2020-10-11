@@ -1,8 +1,10 @@
 # PSModulePath
 ## これは何
-汎用するために、適当にモジュール化したPowerShellScript群。
+書いたスクリプト群。
 
-環境変数`PSModulePath` に登録して、自由に呼び出して扱う。
+それと、汎用するために適当にモジュール化したPowerShellScript群。
+
+[環境変数`PSModulePath`]に登録すると、モジュール化されてるやつは自由に呼び出して扱える。
 
 ## Others
 [PowerShellのModuleをつくるよメモ](https://nnnnusui.github.io/PowerShell-Module)
