@@ -28,10 +28,10 @@ $outputPath = "$outputParent\$baseName$extension"
 
 echo "from: $original"
 echo "to  : $outputPath"
-$duration = Read-Host "いつから(hh:mm:ss)"
+$duration = Read-Host "最後からどれだけ前まで(hh:mm:ss)"
 
 ffmpeg `
-    -ss $duration `
+    -sseof -$duration `
     -i $original `
     -vcodec copy `
     -acodec copy `
