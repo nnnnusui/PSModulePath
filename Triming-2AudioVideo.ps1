@@ -36,6 +36,9 @@ ffmpeg `
     -vcodec copy `
     -acodec copy `
     -map 0 `
+    -map_metadata 0 `
+    -map_metadata:s:v 0:s:v `
+    -map_metadata:s:a 0:s:a `
     $outputPath
 
 if ($?) {
