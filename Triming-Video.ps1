@@ -1,4 +1,4 @@
-﻿$outputRoot = Convert-Path "~backup"
+﻿$outputRoot = Convert-Path "~trim"
 $pwd = (Convert-Path .)
 
 $path = $Args[0]
@@ -39,6 +39,8 @@ ffmpeg `
     -map_metadata 0 `
     -map_metadata:s:v 0:s:v `
     -map_metadata:s:a 0:s:a `
+    # Google Photo 用のresize
+    #-vf "scale=if(gte(iw\,ih)\,min(1920\,iw)\,-2):if(lt(iw\,ih)\,min(1920\,ih)\,-2)" `
     $outputPath
 
 if ($?) {
